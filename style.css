@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: white;
+  background-color: #f9f9f9;
 }
 
 .home {
@@ -234,7 +234,16 @@ footer hr {
   align-items: center;
   height: calc(100vh - 65.33px); /* Adjusted for nav height */
 }
-
+#about-header{
+  color: #111;
+  margin-top: 4vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#about-header h1{
+  margin-bottom: 15px;
+}
 #my-intro{
   color: #555;
   font-size: 0.95rem;
@@ -249,7 +258,7 @@ footer hr {
 
 .about-left {
   width: 40%;
-  object-fit:fill;
+  object-fit:cover;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -278,34 +287,35 @@ img{
 .about-right {
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   width: 60%;
+  height: 100%;
   /* padding: 20px; */
 }
 #basic-details {
   text-align: center;
   font-weight: bold;
   color: #333;
-  font-size: x-large;
+  font-size: xx-large;
   width: 100%;
 }
 .label{
   font-weight: bold;
   color: #333;
+  font-size: large;
 }
 .details{
   color: #555;
-  font-size: medium;
+  font-size: large;
   margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
 
 }
 .about-right-content{
-  width: 70%;
+  width: 80%;
   align-items: center;
   justify-content: center;
 }
@@ -324,6 +334,91 @@ img{
   color: #555;
   font-size: 0.95rem;
   margin-top: 20px;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 2.5vmin;
+}
+
+#resume-btn{
+  margin-top: 30px;
+  background-color: #111;
+  color: white;
+  padding : 12px 10px;
+  border: none;
+  border-radius: 8px;
+}
+button:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 3px 3px 5px black;
+}
+
+/* Skills Section */
+.skills{
+  width: 100vw;
+  height: calc(100vh - 65.33px); /* Adjusted for nav height */
+  background-color: #f9f9f9;
+}
+#skills-header{
+  color: #111;
+  /* margin-top: 4vmin; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#skills-header h1{
+  margin-bottom: 15px;
+}
+#my-level{
+  color: #555;
+  font-size: 0.95rem;
+}
+.skill-list{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+.frontend-skill,.backend-skill,.others{
+  width: 25%;
+  min-height: 40vh;
+  background-color: white;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-sizing: border-box;
+  padding: 15px;
+
+}
+.skill-title{
+  text-align: center;
+  font-weight: bold;
   font-size: large;
+}
+.skill-sub-heading{
+  font-size: 2vmin;
+  color: #333;
+}
+.skill-item{
+  margin-top: 25px;
+  width: 50%;
+  display: flex;
+}
+.skill-item .skill-sub-heading{
+  text-align: start;
+}
+.skill-set{
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+}
+.check-icon{
+  display: inline;
+  margin-right: 5px;
+}
+.skill-text{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
