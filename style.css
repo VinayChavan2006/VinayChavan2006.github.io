@@ -12,9 +12,12 @@ body {
 .home {
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
+  flex-shrink: 0;
   width: 100%;
   padding: 20px 10%;
   display: flex;
@@ -23,6 +26,8 @@ nav {
   flex-wrap: wrap;
   background-color: white;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
 }
 
 nav > div > p {
@@ -52,6 +57,7 @@ nav > div > p {
 }
 
 .hero-section {
+  flex: 1 0 auto;
   display: flex;
   flex-wrap: wrap;
   padding: 40px 10%;
@@ -121,7 +127,7 @@ nav > div > p {
   border-radius: 50%;
   background-size: cover;
   background-position: center;
-  background-image: url("https://static.vecteezy.com/system/resources/previews/012/419/514/non_2x/young-business-man-portrait-at-modern-office-free-photo.jpg");
+  background-image: url("assets/Vinay.jpg");
 }
 
 /* Footer */
@@ -216,4 +222,108 @@ footer hr {
     padding: 10px 16px;
     font-size: 0.9rem;
   }
+}
+
+
+/* About Section */
+.about{
+  width: 100vw;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 65.33px); /* Adjusted for nav height */
+}
+
+#my-intro{
+  color: #555;
+  font-size: 0.95rem;
+}
+.about-main{
+  display: flex;
+  width: 100vw;
+  height: 100%;
+  box-sizing: border-box;
+  /* padding: 40px 10%; */
+}
+
+.about-left {
+  width: 40%;
+  object-fit:fill;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.about-left div {
+  width: 70%;
+  height: 75%;
+
+}
+#about-pic{
+  width: 70%;
+  height: 70%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.about-right {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 60%;
+  /* padding: 20px; */
+}
+#basic-details {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  font-size: x-large;
+  width: 100%;
+}
+.label{
+  font-weight: bold;
+  color: #333;
+}
+.details{
+  color: #555;
+  font-size: medium;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+.about-right-content{
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* I want details to be in two columns */
+.details p {
+  width: 50%;
+  margin: 5px auto;
+  text-align: start;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+#about-me{
+  /* width: 70%; */
+  color: #555;
+  font-size: 0.95rem;
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: large;
 }
