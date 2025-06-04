@@ -28,6 +28,7 @@ nav {
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
   position: fixed;
   top: 0;
+  z-index: 100;
 }
 
 nav > div > p {
@@ -127,7 +128,20 @@ nav > div > p {
   border-radius: 50%;
   background-size: cover;
   background-position: center;
-  background-image: url("assets/Vinay.jpg");
+  background-image: url("assets/vinay_pic.jpg");
+  box-shadow: inset 0 0 0 9px rgb(255 255 255 / 30%);
+  animation: profile_animate 8s ease-in-out infinite 1s;
+}
+@keyframes profile_animate {
+  0%{
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50%{
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100%{
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
 }
 
 /* Footer */
@@ -242,7 +256,7 @@ footer hr {
   align-items: center;
 }
 #about-header h1{
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 #my-intro{
   color: #555;
@@ -345,6 +359,7 @@ img{
   padding : 12px 10px;
   border: none;
   border-radius: 8px;
+  white-space: pre;
 }
 button:hover{
   cursor: pointer;
@@ -366,7 +381,7 @@ button:hover{
   align-items: center;
 }
 #skills-header h1{
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 #my-level{
   color: #555;
@@ -421,4 +436,285 @@ button:hover{
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+/* Qualifications */
+
+.qualification{
+  width: 100vw;
+  min-height: calc(100vh - 65.33px); /* Adjusted for nav height */
+  background-color: #f9f9f9;
+}
+
+#qualification-header{
+  color: #111;
+  /* margin-top: 4vmin; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#qualification-header h1{
+  margin-bottom: 12px;
+}
+#my-qualification{
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.qualification_container{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.qualification_tabs{
+  display: flex;
+  justify-content: center;
+  gap: 12vmin;
+  font-size: large;
+  font-weight: bold;
+  color: #555;
+  margin-top: 2rem;
+}
+.qualification_active{
+  color: #111;
+}
+.qualification-tab-btn:hover{
+  cursor: pointer;
+  color: #111;
+}
+.timeline{
+  display: grid;
+  grid-template-columns: 0.35fr;
+  justify-content: center;
+}
+.education-tab{
+  display: none;
+}
+.education-tab-active{
+  display: block;
+}
+.experience-tab{
+  display: none;
+}
+.experience-tab-active{
+  display: block;
+}
+.qualification-data {
+  height: 100%;
+  position: relative;
+}
+.qualification_left,.qualification_right{
+  width: 100%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+}
+.qualification-details{
+  box-sizing: border-box;
+}
+.qualification_left .qualification-content {
+  grid-column: 1;
+}
+.qualification_right .qualification-content{
+  grid-column: 3;
+  justify-self: end;
+}
+.qualification_right .line-dot-group{
+  grid-column: 2;
+}
+.qualification-data > .qualification-details:last-child .line {
+  display: none;
+}
+.line{
+  width: 2px;
+  height: 100%;
+  background-color: #777;
+  position: absolute;
+  left: 50%;
+}
+
+.circle-dot {
+  width: 16px;
+  height: 16px;
+  background: #111;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #bbb;
+  z-index: 2;
+}
+.line-dot-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  position: relative;
+}
+
+/* Contact Me */
+.contact{
+  width: 100vw;
+  min-height: calc(100vh - 65.33px); /* Adjusted for nav height */
+  background-color: #f9f9f9; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+#contact-me-header{
+  color: #111;
+  /* margin-top: 4vmin; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3vmin;
+}
+#contact-me-header h1{
+  margin-bottom: 12px;
+}
+#my-contact{
+  color: #555;
+  font-size: 0.95rem;
+}
+.contact-main{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    border-radius: 1.5rem;
+    /* background-color: white; */
+    /* box-shadow: 0px 0px 15px black; */
+}
+.contact-help{
+  margin-bottom: 3vmin;
+}
+.contact-us-info{
+    width: 50%;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 40px;
+    border-radius: 1.5rem;
+}
+i{
+    font-size: larger;
+}
+.way{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact-us-form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px ;
+}
+#contact-form-header{
+    margin-bottom: 3vmin;
+}
+form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+label{
+    font-size: small;
+    display: none;
+}
+input,textarea{
+    padding: 0.6rem 0.2rem 0.6rem 0.5rem;
+    border-radius: 1vmin;
+    border: 1px solid #777;
+}
+.input-div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vmin;
+}
+input[type="submit"]{
+  margin-top: 2vmin;
+  background-color: #111;
+  border: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px #111;
+}
+input[type="submit"]:hover{
+  transform: scale(1.05);
+  background-color: #111;
+  cursor: pointer;
+}
+input[type="submit"]:active{
+  transform: scale(1.05);
+  background-color: #363636;
+  cursor: pointer;
+}
+.way{
+  width: 100%;
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: baseline;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+}
+#name-error,#email-error,#message-error{
+    color: red;
+    font-size: 1.8vmin;
+    padding-left: 0.5rem;
+}
+
+/* Add this at the end of your styles.css */
+/* filepath: c:\Users\vinay\OneDrive\Desktop\courses\Sem-4\ElevateLabs\task6\styles.css */
+
+/* For tablets and below */
+@media (max-width: 900px) {
+  .main {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    min-height: 80vh;
+  }
+  .contact-us-info,
+  .contact-us-form {
+    width: 100%;
+    border-radius: 1.5rem 1.5rem 0 0;
+    padding: 25px;
+  }
+  .contact-us-form {
+    border-radius: 0 0 1.5rem 1.5rem;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 600px) {
+  .contact-main {
+    width: 100vw;
+    min-height: 100vh;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .contact-us-info,
+  .contact-us-form {
+    padding: 15px;
+    border-radius: 0;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  #header h1 {
+    font-size: 1.2rem;
+  }
+  .way {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  input, textarea {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
 }
